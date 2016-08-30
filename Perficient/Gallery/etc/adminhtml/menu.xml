@@ -1,0 +1,7 @@
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../Backend/etc/menu.xsd">
+    <menu>
+        <add id="Perficient_Gallery::banner" title="Banner" module="Perficient_Gallery"    sortOrder="90" resource="Perficient_Gallery::gallery" parent="perficient::base" />
+        <add id="Perficient_Gallery::manage_gallery" title="Manage Gallery" module="Perficient_Gallery" sortOrder="10" parent="Perficient_Gallery::banner" action="gallery/" resource="Perficient_Gallery::gallery"/>
+        <add id="Perficient_Gallery::manage_images" title="Manage Images" module="Perficient_Gallery" sortOrder="10" parent="Perficient_Gallery::banner" action="gallery/images/" resource="Perficient_Gallery::gallery"/>
+    </menu>
+</config>

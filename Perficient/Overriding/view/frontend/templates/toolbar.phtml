@@ -1,0 +1,40 @@
+<script type="text/javascript">
+    require(['jquery'],function($){
+        $(window).load(function() {
+            alert('In side function');
+            if(!jQuery('#current').length){
+
+                jQuery("body").append('<input type="hidden" name="current"  id="current" value="1" />');
+                jQuery("body").append('<input type="hidden" name="next"  id="final" value="<?php echo $this->getLastPageNum();  ?>" />');
+
+
+                jQuery(window).scroll(function(event){
+                    setTimeout(function()
+                    {
+
+                        var current_val=parseInt(jQuery("#current").val());
+                        var final_val=parseInt(jQuery("#final").val());
+                        var next_val=parseInt(current_val)+1;
+
+                        if(final_val>current_val){
+                            jQuery("#ajax-load").css("display","block");
+                            jQuery.ajax({
+                                url: "<?php echo $this->getPagerUrl(); ?>?p="+next_val,
+                                async:false,
+                                success: function(html){
+                                    var $result = jQuery(html).find('.products-grid').children();
+                                    jQuery(".products-grid").append($result);
+                                    jQuery("#ajax-load").css("display","none");
+                                    jQuery("#current").val(next_val);
+                                }
+                            });
+                        }
+                    });
+                });
+            }
+
+        });
+
+    });
+
+</script>

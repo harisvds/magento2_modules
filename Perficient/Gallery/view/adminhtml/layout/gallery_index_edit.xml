@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="admin-2columns-left" xsi:noNamespaceSchemaLocation="../../../../../../../lib/internal/Magento/Framework/View/Layout/etc/page_configuration.xsd">
+    <head>
+        <css src="jquery/fileUploader/css/jquery.fileupload-ui.css"/>
+        <link src="Magento_Catalog::catalog/category-selector.css"/>
+        <script src="Perficient_Gallery::js/custom.js"/>
+    </head>
+
+    <update handle="editor"/>
+    <body>
+        <referenceContainer name="content">
+            <block class="Perficient\Gallery\Block\Adminhtml\Gallery\Edit" name="gallery_post_edit"/>
+        </referenceContainer>
+        <referenceContainer name="left">
+            <block class="Perficient\Gallery\Block\Adminhtml\Gallery\Edit\Tabs" name="perficient_gallery_gallery.edit.tabs">
+                <!--<block class="Perficient\Gallery\Block\Adminhtml\Gallery\Edit\Tab\Info" name="perficient_gallery_gallery.edit.tab.info"/>-->
+                <!--<action method="addTab">-->
+                    <!--<argument name="name" xsi:type="string">perficient_gallery_gallery.edit.tab.info</argument>-->
+                    <!--<argument name="block" xsi:type="string">gallery_edit_tab_info</argument>-->
+                <!--</action>-->
+            </block>
+        </referenceContainer>
+    </body>
+</page>

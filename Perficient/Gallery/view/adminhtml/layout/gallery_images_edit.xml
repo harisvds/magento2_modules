@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="admin-2columns-left" xsi:noNamespaceSchemaLocation="../../../../../../../lib/internal/Magento/Framework/View/Layout/etc/page_configuration.xsd">
+    <head>
+        <link src="Magento_Catalog::catalog/category-selector.css"/>
+        <script src="Perficient_Gallery::js/custom.js"/>
+
+    </head>
+    <update handle="editor"/>
+    <body>
+        <referenceContainer name="content">
+            <block class="Perficient\Gallery\Block\Adminhtml\Images\Edit" name="images_post_edit"/>
+        </referenceContainer>
+            <referenceContainer name="left">
+                <block class="Perficient\Gallery\Block\Adminhtml\Images\Edit\Tabs" name="perficient_gallery_gallery.edit.tabs"/>
+            </referenceContainer>
+    </body>
+</page>
+
+
+
+
+

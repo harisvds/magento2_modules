@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2015 Pagseguro. All rights reserved.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Backend/etc/menu.xsd">
+    <menu>
+        <add id="perficient::base" title="Perficient" module="Perficient_Blog" sortOrder="90" resource="Perficient_Blog::sample"/>
+        <add id="perficient_blog::blog" title="Manage Blog" module="Perficient_Blog" sortOrder="10" parent="perficient::base" action="blogs/blog/" resource="Perficient_Blog::blog"/>
+    </menu>
+</config>
