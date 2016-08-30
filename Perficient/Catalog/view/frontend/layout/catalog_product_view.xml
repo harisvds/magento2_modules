@@ -1,9 +1,0 @@
-<?xml version="1.0"?>
-<page layout="1column">
-    <body>
-        <referenceContainer  name="product.info.form.content">
-            <!--<block class="Magento\Catalog\Block\Product\View" name="product.info.addtocart" as="addtocart" template="product/view/addtocart.phtml"/>-->
-            <block class="Magento\Catalog\Block\Product\View" name="product.info.addtocart" as="addtocart" template="Perficient_Catalog::product/view/addtocart.phtml"/>
-        </referenceContainer>
-    </body>
-</page>
