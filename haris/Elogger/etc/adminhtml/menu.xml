@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2015 Pagseguro. All rights reserved.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Backend/etc/menu.xsd">
+    <menu>
+         <add id="perficient_elogger::log" title="Email Log" module="Perficient_Gallery"    sortOrder="90" resource="Perficient_Elogger::ellogger" parent="perficient::base" />
+         <add id="perficient_elogger::ellogger" title="Email Histroy" module="Perficient_Elogger" sortOrder="10" parent="perficient_elogger::log" action="emaillog/" resource="Perficient_Blog::ellogger"/>
+    </menu>
+</config>

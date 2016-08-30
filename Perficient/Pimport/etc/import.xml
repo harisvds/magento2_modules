@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_ImportExport:etc/import.xsd">
+    <entity name="cms_page_code" label="CMS Page"
+            model="Perficient\Pimport\Model\Import\Page"
+            behaviorModel="Magento\ImportExport\Model\Source\Import\Behavior\Basic"/>
+
+    <entity name="cms_block_code" label="CMS Block"
+            model="Perficient\Pimport\Model\Import\Block"
+            behaviorModel="Magento\ImportExport\Model\Source\Import\Behavior\Basic"/>
+</config>

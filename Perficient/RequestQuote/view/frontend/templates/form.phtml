@@ -1,0 +1,11 @@
+<h2>Quote Request </h2>
+<form method="post" id="quote_form"
+      action="<?php echo $block->getAction(); ?>">
+    <?php echo $block->getBlockHtml('formkey'); ?>
+    Name <input type="text" name="name" value="">
+    Email <input type="text" name="email" value="">
+    Phone <input type="text" name="phone" value="">
+    Company <input type="text" name="company" value="">
+    Message <textarea name="message"></textarea>
+    <button type="submit" value="Submit">Submit</button>
+</form>

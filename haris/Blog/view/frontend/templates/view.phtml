@@ -1,0 +1,64 @@
+<style>
+    .simplenews > ul {
+        list-style: none;
+        padding: 0;
+    }
+    .simplenews > ul li {
+        padding: 10px 5px;
+        margin: 0;
+        background-color: #fff;
+        border-bottom: 1px #c4c1bc solid;
+        display: inline-block;
+        width: 100%;
+    }
+    .simplenews > ul li:last-child {
+        border-bottom: none;
+    }
+    .simplenews-list {
+        float: left;
+        position: relative;
+        margin-left: 10px;
+        width: 100%;
+    }
+    .simplenews-list a.news-title {
+        font-weight: bold;
+    }
+    .simplenews-list a.news-title:hover {
+        text-decoration: none;
+    }
+    .block-simplenews .block-title {
+        margin: 0px 0px 20px;
+    }
+    .block-simplenews-heading {
+        font-size: 18px;
+        font-weight: 300;
+    }
+</style>
+<div class="simplenews">
+
+<?php
+$collection=$this->getBlog();
+if (count($collection) > 0) :
+    ?>
+
+
+    <ul>
+
+            <li>
+                <div class="simplenews-list">
+                   <a><?php echo $collection->getTitle() ?></a>
+                    <p>&nbsp;</p>
+                    <div class="simplenews-list-content">
+                        <?php echo $collection->getDescription() ?>
+                    </div>
+                </div>
+            </li>
+    </ul>
+
+    <div style="clear: both"></div>
+
+
+<?php else : ?>
+    <p><?php echo __('Have no article!') ?></p>
+<?php endif; ?>
+</div>

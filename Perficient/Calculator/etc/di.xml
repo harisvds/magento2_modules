@@ -1,0 +1,17 @@
+<?xml version="1.0" ?>
+<config>
+   <!-- <type name="Perficient\Calculator\Model\Basic">
+        <plugin name="Perficient_Calculator::before" type="Perficient\Calculator\Plugin\Before" sortOrder="1" />
+    </type>
+
+
+    <type name="Perficient\Calculator\Model\Basic">
+        <plugin name="Perficient_Calculator::after" type="Perficient\Calculator\Plugin\After" sortOrder="2" />
+    </type>-->
+
+    <type name="Perficient\Calculator\Model\Basic">
+        <plugin name="Perficient_Calculator::around" type="Perficient\Calculator\Plugin\Around" sortOrder="1" />
+    </type>
+
+    <preference for="Perficient\Calculator\Model\Basic" type="Perficient\Calculator\Model\Advanced" />
+</config>

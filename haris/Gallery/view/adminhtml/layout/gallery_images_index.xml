@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="content">
+            <block class="Perficient\Gallery\Block\Adminhtml\Images"
+                   name="adminhtml.block.gallery.images.container">
+                <block class="Perficient\Gallery\Block\Adminhtml\Images\Grid"
+                       name="perficient.gallery.block.adminhtml.images.container.grid" as="grid1"/>
+            </block>
+        </referenceContainer>
+    </body>
+</page>

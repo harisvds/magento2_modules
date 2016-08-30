@@ -1,0 +1,13 @@
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Backend/etc/menu.xsd">
+    <menu>
+        <add id="perficient_core::core_parent" title="Core" module="Perficient_Core"    sortOrder="90" resource="Perficient_Core::core_parent"/>
+        <add id="perficient_core::core_management" title="MANAGE" module="Perficient_Core" sortOrder="10" parent="perficient_core::core_parent"  resource="Perficient_Core::core_management"/>
+        <add id="perficient_core::core_department" title="Department" module="Perficient_Core" sortOrder="10" parent="perficient_core::core_management" action="core/department/" resource="Perficient_Core::core"/>
+        <add id="perficient_core::core_designation" title="Designation" module="Perficient_Core" sortOrder="10" parent="perficient_core::core_management" action="core/designation/" resource="Perficient_Core::core"/>
+        <add id="perficient_core::core_employee" title="Employee" module="Perficient_Core" sortOrder="10" parent="perficient_core::core_management" action="core/employee/" resource="Perficient_Core::core"/>
+        <add id="perficient_core::report_employees" title="Employee" module="Magento_Reports" sortOrder="80" parent="Magento_Reports::report" resource="Magento_Reports::statistics"/>
+        <add id="perficient_core::core_employee_content" title="Employee Detail" module="Perficient_Core" parent="perficient_core::report_employees" action="core/reports" resource="Magento_Reports::report"/>
+        <!--<add id="perficient_core::Employee" title="Webkul Menu" module="Perficient_Core" sortOrder="100" parent="Magento_Backend::content_elements" action="core/reports/" resource="Perficient_Core::Employee"/>-->
+
+    </menu>
+</config>

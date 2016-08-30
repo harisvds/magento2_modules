@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2015 Pagseguro. All rights reserved.
+ */
+-->
+
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="admin-2columns-left" xsi:noNamespaceSchemaLocation="../../../../../../../lib/internal/Magento/Framework/View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="left">
+            <block class="Perficient\Blog\Block\Adminhtml\Blog\Edit\Tabs" name="perficient_blog_blog_edit_tabs">
+                <block class="Perficient\Blog\Block\Adminhtml\Blog\Edit\Tab\Main" name="perficient_blog_blog_edit_tab_main"/>
+                <action method="addTab">
+                    <argument name="name" xsi:type="string">main_section</argument>
+                    <argument name="block" xsi:type="string">perficient_blog_blog_edit_tab_main</argument>
+                </action>
+            </block>
+        </referenceContainer>
+        <referenceContainer name="content">
+            <block class="Perficient\Blog\Block\Adminhtml\Blog\Edit" name="blog_blog_edit"/>
+        </referenceContainer>
+    </body>
+</page>
